@@ -12,10 +12,27 @@ class TestSpaceCraft(unittest.TestCase):
         self.craft5 = SpaceCraft(-5, 0, 5, "U")
         self.craft6 = SpaceCraft(-5, 7, -5, "D")
 
+        self.cmds1 = ["f", "r", "u", "b", "l"]
+        self.cmds2 = ["d", "f", "l", "b", "u", "d", "r", "b", "f", "l"]
+        self.cmds3 = ["u", "f", "l", "f", "r", "f"]
+
     def test_print_position_direction(self):
         self.assertEqual(self.craft1.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: N")
 
         self.assertEqual(self.craft2.__str__(), "Final Position: (9, 4, -3)\nFinal Direction: S")
+
+    def test_run_spacecraft(self):
+        craft8 = SpaceCraft(0, 0, 0, "N")
+        craft8.run_spacecraft(self.cmds1)
+        self.assertEqual(craft8.__str__(), "Final Position: (0, 1, -1)\nFinal Direction: W")
+
+        craft8 = SpaceCraft(0, 0, 0, "N")
+        craft8.run_spacecraft(self.cmds2)
+        self.assertEqual(craft8.__str__(), "Final Position: (-1, 0, -1)\nFinal Direction: N")
+
+        craft8 = SpaceCraft(0, 0, 0, "N")
+        craft8.run_spacecraft(self.cmds3)
+        self.assertEqual(craft8.__str__(), "Final Position: (-1, 1, 1)\nFinal Direction: N")
 
     def test_move(self):
         self.craft1.move("f")

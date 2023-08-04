@@ -33,5 +33,12 @@ class SpaceCraft:
         elif self.face_dir == "D":
             self.face_dir = "E" if cmd == "l" else ("W" if cmd == "r" else ("N" if cmd == "u" else "S"))
 
+    def run_spacecraft(self, cmds):
+        for cmd in cmds:
+            if cmd == "f" or cmd == "b":
+                self.move(cmd)
+            else:
+                self.turn(cmd)
+
     def __str__(self):
         return "Final Position: ({}, {}, {})\nFinal Direction: {}".format(self.x, self.y, self.z, self.face_dir)
