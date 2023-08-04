@@ -54,6 +54,103 @@ class TestSpaceCraft(unittest.TestCase):
         self.craft6.move("b")
         self.assertEqual(self.craft6.__str__(), "Final Position: (-5, 7, -5)\nFinal Direction: D")
 
+    def test_turn(self):
+        craft7 = SpaceCraft(0, 0, 0, "N")
+        craft7.turn("l")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: W")
+
+        craft7 = SpaceCraft(0, 0, 0, "N")
+        craft7.turn("r")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: E")
+
+        craft7 = SpaceCraft(0, 0, 0, "N")
+        craft7.turn("u")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: U")
+
+        craft7 = SpaceCraft(0, 0, 0, "N")
+        craft7.turn("d")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: D")
+
+        craft7 = SpaceCraft(0, 0, 0, "S")
+        craft7.turn("l")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: E")
+
+        craft7 = SpaceCraft(0, 0, 0, "S")
+        craft7.turn("r")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: W")
+
+        craft7 = SpaceCraft(0, 0, 0, "S")
+        craft7.turn("u")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: U")
+
+        craft7 = SpaceCraft(0, 0, 0, "S")
+        craft7.turn("d")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: D")
+
+        craft7 = SpaceCraft(0, 0, 0, "E")
+        craft7.turn("l")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: N")
+
+        craft7 = SpaceCraft(0, 0, 0, "E")
+        craft7.turn("r")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: S")
+
+        craft7 = SpaceCraft(0, 0, 0, "E")
+        craft7.turn("u")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: U")
+
+        craft7 = SpaceCraft(0, 0, 0, "E")
+        craft7.turn("d")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: D")
+
+        craft7 = SpaceCraft(0, 0, 0, "W")
+        craft7.turn("l")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: S")
+
+        craft7 = SpaceCraft(0, 0, 0, "W")
+        craft7.turn("r")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: N")
+
+        craft7 = SpaceCraft(0, 0, 0, "W")
+        craft7.turn("u")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: U")
+
+        craft7 = SpaceCraft(0, 0, 0, "W")
+        craft7.turn("d")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: D")
+
+        craft7 = SpaceCraft(0, 0, 0, "U")
+        craft7.turn("l")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: W")
+
+        craft7 = SpaceCraft(0, 0, 0, "U")
+        craft7.turn("r")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: E")
+
+        craft7 = SpaceCraft(0, 0, 0, "U")
+        craft7.turn("u")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: S")
+
+        craft7 = SpaceCraft(0, 0, 0, "U")
+        craft7.turn("d")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: N")
+
+        craft7 = SpaceCraft(0, 0, 0, "D")
+        craft7.turn("l")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: E")
+
+        craft7 = SpaceCraft(0, 0, 0, "D")
+        craft7.turn("r")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: W")
+
+        craft7 = SpaceCraft(0, 0, 0, "D")
+        craft7.turn("u")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: N")
+
+        craft7 = SpaceCraft(0, 0, 0, "D")
+        craft7.turn("d")
+        self.assertEqual(craft7.__str__(), "Final Position: (0, 0, 0)\nFinal Direction: S")
+
 
 if __name__ == "__main__":
     unittest.main()
